@@ -6,12 +6,12 @@ La sintaxis básica para ejecutar paygen es:
 
 
 ./paygen <file_name> -p | -b <code>
-Donde:
+Donde>
 
-<file_name>: Nombre del archivo al que se agregará el código.
--p: Indica que el código es Python.
--b: Indica que el código es Bash.
-<code>: El código que se agregará al archivo especificado.
+<file_name> > Nombre del archivo al que se agregará el código.
+-p> Indica que el código es Python.
+-b> Indica que el código es Bash.
+<code> El código que se agregará al archivo especificado.
 Ejemplos
 Agregar y Ejecutar Código Bash
 Para agregar código Bash a un archivo y ejecutarlo, usa el parámetro -b:
@@ -29,11 +29,13 @@ Para agregar código Python a un archivo y ejecutarlo, usa el parámetro -p:
 Este comando agregará print("Hello World!") al archivo my_script.py y ejecutará el archivo como Python.
 
 #Parámetros
--b <code>: Agrega el código Bash proporcionado al archivo especificado y lo ejecuta.
--p <code>: Agrega el código Python proporcionado al archivo especificado y lo ejecuta.
+-b <code> > Agrega el código Bash proporcionado al archivo especificado y lo ejecuta.
+-p <code> > Agrega el código Python proporcionado al archivo especificado y lo ejecuta.
 Instalación
 Asegúrate de tener permisos de ejecución para paygen. Puedes hacer que el archivo sea ejecutable con el siguiente comando:
 
-git clone 
+<git clone https://github.com/ScriptsXorgs/paygen.git>
+<cd paygen>
+<bash paygen>
 
 Luego, ejecuta paygen siguiendo los ejemplos anteriores.

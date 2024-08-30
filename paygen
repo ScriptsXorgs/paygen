@@ -1,0 +1,38 @@
+#!/bin/bash
+
+use_dm() {
+    echo "Uso: $0 <nombre_del_archivo> -p|-b <contenido_del_script>"
+    echo "  -p  Para scripts en Python"
+    echo "  -b  Para scripts en Bash"
+}
+
+# Verifica el número correcto de argumentos
+if [ "$#" -lt 3 ]; then
+    use_dm
+    exit 1
+fi
+
+file_gename=$1
+lenguaje=$2
+shift 2  # Elimina los primeros dos argumentos de la lista de parámetros
+
+case "$lenguaje" in
+    -p)
+        # Para scripts en Python
+        echo "#!/usr/bin/env python3" > "$file_gename"
+        echo "$@" >> "$file_gename"
+        chmod +x "$file_gename"
+        echo "Script Python generado exitosamente en '$file_gename'."
+        ;;
+    -b)
+        # Para scripts en Bash
+        echo "#!/bin/bash" > "$file_gename"
+        echo "$@" >> "$file_gename"
+        chmod +x "$file_gename"
+        echo "Script Bash generado exitosamente en '$file_gename'."
+        ;;
+    *)
+        use_dm
+        exit 1
+        ;;
+esac
